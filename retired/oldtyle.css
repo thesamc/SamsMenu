@@ -1,0 +1,282 @@
+/* Root Variables for Default Theme */
+:root {
+  --background-color: #2A2E25;      /* Deep forest charcoal */
+  --navbar-color: #3B4536;          /* Rich moss green */
+  --nav-button-color: #8A9B68;      /* Sage green - stands out */
+  --text-color: #F5EDE3;            /* Warm white text */
+  --card-front-bg: #F5EDE3;         /* Warm white cards */
+  --card-back-bg: #6B7F54;          /* Olive green */
+  --card-shadow: rgba(32, 38, 29, 0.25); /* Natural shadow */
+  --card-text-front: #2A2E25;       /* Dark forest text on light bg */
+  --card-text-back: #F5EDE3;        /* Warm white text on dark bg */
+}
+
+/* Bold Theme */
+:root.bold-theme {
+  --background-color: #000000;          /* Pure black for maximum contrast */
+  --navbar-color: #1a1a1a;             /* Deep black navbar */
+  --nav-button-color: #FF0000;         /* Pure red for boldness */
+  --text-color: #FFFFFF;               /* Pure white text */
+  --card-front-bg: #ffffff;            /* White cards */
+  --card-back-bg: #FF0000;             /* Matching red */
+  --card-shadow: rgba(255, 0, 0, 0.5); /* Strong red shadow */
+  --card-text-front: #000000;          /* Black text on white */
+  --card-text-back: #FFFFFF;           /* White text on red */
+}
+
+:root.easter-theme {
+  --background-color: #FFFFFF;      /* Clean white background */
+  --navbar-color: #B4E9D6;          /* Crisp mint navbar */
+  --nav-button-color: #9B6B9E;      /* Deep lavender buttons - stands out */
+  --text-color: #2C3E50;            /* Dark blue-grey text - very readable */
+  --card-front-bg: #F8F9FA;         /* Slightly off-white cards */
+  --card-back-bg: #9B6B9E;          /* Deep lavender back */
+  --card-shadow: rgba(155, 107, 158, 0.25); /* Subtle shadow */
+  --card-text-front: #2C3E50;       /* Dark, clear text */
+  --card-text-back: #FFFFFF;        /* Pure white text on colored backgrounds */
+}
+
+:root.neon-theme {
+  --background-color: #0C0C1F;        /* Deep night */
+  --navbar-color: #1A1A3A;            
+  --nav-button-color: #0FF;           /* Cyan */
+  --text-color: #FFFFFF;
+  --card-front-bg: #1A1A3A;
+  --card-back-bg: #FF00FF;            /* Magenta */
+  --card-shadow: rgba(0, 255, 255, 0.6);
+  --card-text-front: #0FF;
+  --card-text-back: #FFFFFF;
+}
+
+:root.electric-theme {
+    --background-color: #6600FF;        /* Electric purple */
+      --navbar-color: #FF00FF;           /* Magenta navbar */
+      --nav-button-color: #00FFFF;       /* Cyan buttons */
+      --text-color: #FFFFFF;             /* White text */
+      --card-front-bg: #FFFFFF;          /* White cards */
+      --card-back-bg: #00FFFF;           /* Cyan back */
+      --card-shadow: rgba(0, 255, 255, 0.5); /* Cyan glow */
+      --card-text-front: #6600FF;        /* Purple text */
+      --card-text-back: #000000;         /* Black text on cyan */
+}
+  
+  /* Base Styles */
+  body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+  }
+  
+  h3 {
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: 30px;
+  }
+  
+  a {
+    color: var(--nav-button-color);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  a:hover {
+    color: #8b5e3c; /* Rust Brown for hover state */
+  }
+  
+  p {
+    color: var(--text-color);
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    width: 100vw; /* Full width of the viewport */
+    margin: 0; /* Remove any margins */
+    padding: 10px 0;
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #navbarContent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-buttons {
+    background: none;
+    border: none;
+    color: var(--nav-button-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-buttons:hover {
+    color: #9b8d78; /* Mushroom */
+  }
+  
+  .nav-buttons:active {
+    color: #8b5e3c; /* Rust Brown */
+  }
+  
+  .letter {
+    color: var(--text-color);
+    font-family: "Rampart One", cursive;
+    font-size: 3rem;
+    transition: 0.3s ease;
+  }
+  
+  .letter:hover {
+    color: var(--nav-button-color);
+    transform: scale(1.1);
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: var(--text-color) !important;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--nav-button-color) !important;
+  }
+  
+  .navbar-toggler {
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    padding: 5px;
+    margin-left: auto;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(247, 236, 225, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Recipe Section */
+  .recipe-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--navbar-color);
+  }
+  
+  /* Recipe Cards */
+  .recipe-item {
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    margin: 0;
+    justify-self: center;
+    max-width: 300px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-front {
+    background: var(--card-front-bg);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-front h3, .card-front p {
+    color: var(--card-text-front);
+}
+
+
+  
+  .card-back {
+    background: var(--card-back-bg);
+    color: var(--card-text-back);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .recipe-item:hover .card-inner {
+    transform: scale(1.02);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar .navbar-nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .letter {
+      font-size: 2rem;
+    }
+  
+    .recipe-section {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 1rem;
+    }
+  }
+
+  .theme-selector {
+    padding: 5px;
+    border-radius: 19px;
+  }
+  
